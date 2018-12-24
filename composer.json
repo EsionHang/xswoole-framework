@@ -1,0 +1,34 @@
+{
+    "name": "xswoole/framework",
+    "type": "library",
+    "authors": [
+        {
+            "name": "黄欲升",
+            "email": "huangyusheng@anlewo.com"
+        }
+    ],
+    "keywords": [
+        "php",
+        "swoole",
+        "xswoole-framework",
+        "xswoole",
+        "mvc",
+        "coroutine"
+    ],
+    "description": "microservice framework base on swoole",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=7.0",
+        "nikic/fast-route": "*",
+        "ext-swoole": ">=4.2.9",
+        "ext-seaslog": ">=1.9.0"
+    },
+    "require-dev": {
+        "swoft/swoole-ide-helper": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "xswoole\\": "src/"
+        }
+    }
+}
