@@ -1,6 +1,6 @@
 <?php
 
-namespace xswoole\Core;
+namespace xswoole\core;
 
 use xswoole\App;
 
@@ -18,9 +18,9 @@ class Config
     public static function load()
     {
         $configPath = App::$applicationPath .
-                        DS . 'config';
+            DS . 'config';
         self::$configMap = require $configPath .
-                        DS . 'default.php';
+            DS . 'default.php';
     }
 
     /**

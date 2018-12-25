@@ -1,12 +1,12 @@
 <?php
 namespace xswoole;
 
-use xswoole\Core\Config;
-use xswoole\Core\Log;
-use xswoole\Core\Route;
-use xswoole\Coroutine\Context;
-use xswoole\Coroutine\Coroutine;
 use Swoole;
+use xswoole\core\Config;
+use xswoole\core\Log;
+use xswoole\core\Route;
+use xswoole\coroutine\Context;
+use xswoole\coroutine\Coroutine;
 
 class App
 {
@@ -59,7 +59,7 @@ class App
                 if (!empty($mysqlConfig)) {
                     try {
                         //配置了mysql, 初始化mysql连接池
-                        Pool\Mysql::getInstance($mysqlConfig);
+                        pool\Mysql::getInstance($mysqlConfig);
                     } catch (\Exception $e) {
                         //初始化异常，关闭服务
                         $serv->shutdown();
@@ -76,11 +76,11 @@ class App
                     //初始化上下文
                     $context = new Context($request, $response);
                     //存放容器pool
-                    Pool\Context::set($context);
+                    pool\Context::set($context);
                     //协程退出，自动清空
                     defer(function () use ($coId) {
                         //清空当前pool的上下文，释放资源
-                        Pool\Context::clear($coId);
+                        pool\Context::clear($coId);
                     });
 
                     //自动路由

@@ -1,8 +1,7 @@
 <?php
-namespace xswoole\Coroutine;
+namespace xswoole\coroutine;
 
 use Swoole\Coroutine as SwCo;
-
 
 class Coroutine
 {

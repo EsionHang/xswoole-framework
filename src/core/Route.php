@@ -1,7 +1,6 @@
 <?php
 
-namespace xswoole\Core;
-
+namespace xswoole\core;
 
 class Route
 {

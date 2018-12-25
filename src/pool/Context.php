@@ -1,8 +1,7 @@
 <?php
-namespace xswoole\Pool;
+namespace xswoole\pool;
 
-use xswoole\Coroutine\Coroutine;
-
+use xswoole\coroutine\Coroutine;
 
 /**
  * Class Context
@@ -17,7 +16,7 @@ class Context
     public static $pool = [];
 
     /**
-     * @return \xswoole\Coroutine\Context
+     * @return \xswoole\coroutine\Context
      * @desc 可以任意协程获取到context
      */
     public static function getContext()

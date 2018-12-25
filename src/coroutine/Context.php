@@ -1,7 +1,6 @@
 <?php
 
-namespace xswoole\Coroutine;
-
+namespace xswoole\coroutine;
 
 class Context
 {

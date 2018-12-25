@@ -1,8 +1,8 @@
 <?php
-namespace xswoole\Core;
+namespace xswoole\core;
 
-use xswoole\App;
 use lyzy\SLog;
+use xswoole\App;
 
 class Log extends SLog
 {

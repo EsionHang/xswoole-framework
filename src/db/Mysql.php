@@ -1,8 +1,7 @@
 <?php
 
-namespace xswoole\Db;
+namespace xswoole\db;
 
-use Swoole\Coroutine;
 use Swoole\Coroutine\MySQL as SwMySql;
 
 class Mysql
@@ -10,9 +9,9 @@ class Mysql
     /**
      * @var MySQL
      */
-    private $master;   //主数据库连接
-    private $slave;     //从数据库连接list
-    private $config;    //数据库配置
+    private $master; //主数据库连接
+    private $slave; //从数据库连接list
+    private $config; //数据库配置
 
     /**
      * @param $config
@@ -112,7 +111,7 @@ class Mysql
                 return $this->parseResult($result, $db);
             }
 
-            if (!empty($db->errno)) {  //有错误码，则抛出弃常
+            if (!empty($db->errno)) { //有错误码，则抛出弃常
                 throw new \Exception($db->error, $db->errno);
             }
         }
@@ -135,7 +134,6 @@ class Mysql
         }
         return $result;
     }
-
 
     /**
      * @param $sql
@@ -165,7 +163,7 @@ class Mysql
         return [
             'type' => 'master',
             'index' => 0,
-            'db' => $this->master
+            'db' => $this->master,
         ];
     }
 

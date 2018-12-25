@@ -6,11 +6,10 @@
  * Time: 19:44
  */
 
-namespace xswoole\Db;
+namespace xswoole\db;
 
-use xswoole\Pool\Mysql as MysqlPool;
-use xswoole\Coroutine\Coroutine;
-
+use xswoole\coroutine\Coroutine;
+use xswoole\pool\Mysql as MysqlPool;
 
 class Dao
 {
@@ -28,7 +27,6 @@ class Dao
 
     //主键字段名
     private $pkId;
-
 
     public function __construct($entity)
     {

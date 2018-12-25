@@ -1,14 +1,14 @@
 <?php
 
-namespace xswoole\Pool;
+namespace xswoole\pool;
 
-use xswoole\Db\Mysql as DB;
 use chan;
+use xswoole\db\Mysql as DB;
 
 class Mysql
 {
     private static $instance;
-    private $pool;  //连接池容器，一个channel
+    private $pool; //连接池容器，一个channel
     private $config;
 
     /**
